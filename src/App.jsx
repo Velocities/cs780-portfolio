@@ -6,6 +6,7 @@ import { AboutMe } from './AboutMe';
 import { MyClasswork } from './MyClasswork';
 import { PaddedButton } from './PaddedButton';
 import { PaddedLink } from './PaddedLink';
+import { FiExternalLink } from 'react-icons/fi';
 
 function App() {
   const [selectedSectionToView, setSelectedSectionToView] = useState(0)
@@ -21,7 +22,10 @@ function App() {
         <PaddedButton onClick={() => setSelectedSectionToView(0)}>About Me</PaddedButton>
         <PaddedButton onClick={() => setSelectedSectionToView(1)}>My Classwork</PaddedButton>
         <PaddedLink href="https://courses.unh.edu/class/202610/15692" target='_blank'>
-          HCI Course Fall 2026
+          <span className="inline-flex items-center gap-2">
+            HCI Course Fall 2026
+            <FiExternalLink aria-hidden="true" className="text-base" />
+          </span>
         </PaddedLink>
       </nav>
 
